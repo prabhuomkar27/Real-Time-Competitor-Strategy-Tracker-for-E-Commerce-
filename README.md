@@ -1,21 +1,57 @@
 # Real-Time Competitor Strategy Tracker for E-Commerce
 
-## Project Overview
+## 1. Project Overview
+The **Real-Time Competitor Strategy Tracker** is an advanced e-commerce monitoring tool that helps businesses track competitor pricing, discounts, and customer sentiment. By leveraging web scraping, predictive analytics, and AI-powered sentiment analysis, this tool provides strategic insights for businesses to stay ahead in the market.
 
-This project focuses on creating a real-time competitive intelligence tool for e-commerce businesses. It provides actionable insights by monitoring competitor pricing, discount strategies, and customer sentiment. The solution leverages:
+## 2. Features
+- **Real-Time Data Scraping**: Extracts product prices, discounts, and ratings from e-commerce websites.
+- **Sentiment Analysis**: Analyzes customer reviews using an NLP model to determine sentiment trends.
+- **Predictive Pricing Model**: Uses ARIMA and Random Forest models to forecast competitor discounts.
+- **Slack Notifications**: Sends strategic recommendations directly to a Slack channel.
+- **Interactive Dashboard**: Built with Streamlit and Plotly for data visualization and business insights.
 
-• Machine Learning: Predictive modeling with ARIMA.
+## 3. Setup Instructions
 
-• LLMs: Sentiment analysis using Hugging Face Transformers and Groq.
+### Step 1: Install Dependencies
+Ensure you have Python installed and install the required libraries:
+```sh
+pip install -r requirements.txt
+```
 
-• Integration: Slack notifications for real-time updates.
+### Step 2: Set Up Groq API Key
+Obtain a Groq API Key and add it to your environment variables:
+```sh
+export API_KEY="your_groq_api_key"
+```
 
-## Features
+### Step 3: Configure Slack Webhook
+Set up a Slack Webhook to receive notifications:
+```sh
+export SLACK_WEBHOOK="your_slack_webhook_url"
+```
 
-1. Competitor Data Aggregation: Track pricing and discount strategies.
+### Step 4: Run the Scraper
+Run the scraper to collect competitor data:
+```sh
+python scrape.py
+```
 
-2. Sentiment Analysis: Analyze customer reviews for actionable insights.
+### Step 5: Start the Dashboard
+Launch the Streamlit dashboard:
+```sh
+streamlit run app.py
+```
 
-3. Predictive Modeling: Forecast competitor discounts.
+## 4. Project Files
+- **app.py**: Streamlit dashboard for visualizing competitor data.
+- **scrape.py**: Web scraper for collecting product details from e-commerce sites.
+- **competitor_data.csv**: Stores scraped competitor data.
+- **reviews.csv**: Stores collected customer reviews.
+- **requirements.txt**: List of required Python dependencies.
+- **readme.md**: Documentation for the project.
 
-4. Slack Integration: Get real-time notifications on competitor activity.
+## 5. Usage
+1. Run `scrape.py` to gather competitor data from e-commerce websites.
+2. Start the `app.py` dashboard to analyze real-time insights.
+3. View predicted pricing trends and sentiment analysis.
+4. Receive strategic recommendations and notifications via Slack.
